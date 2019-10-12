@@ -1,0 +1,30 @@
+.signup-wrapper {
+    max-width:  90%;
+    width: 700px;
+  }
+
+  .title {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5%;
+  }
+
+  .signupForm {
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+  }
+   
+  .full-width {
+    width: 100%;
+  }
+
+  .signupCheckBox {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+
+
+  

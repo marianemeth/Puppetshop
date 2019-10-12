@@ -1,0 +1,70 @@
+<div class="login-wrapper container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+  <mat-toolbar class="title">
+    <span>Bejelentkezés az adminfelületre</span>
+  </mat-toolbar>
+  <mat-card class="loginForm">
+    <mat-card-content layout="column">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="example-form" fxLayout="column">
+        <mat-form-field class="full-width">
+          <input type="email" matInput placeholder="Email cím" formControlName="email">
+          <mat-hint>Kérem, adja meg az email címét!</mat-hint>
+          <mat-error>Érvénytelen email cím.</mat-error>
+        </mat-form-field>
+            
+        <mat-form-field class="full-width">
+          <input
+          type="password"
+          matInput
+          placeholder="Jelszó"
+          formControlName="password">
+          <mat-hint>Kérem, adja meg a jelszavát!</mat-hint>
+          <mat-error>Hiányzó jelszó!</mat-error>
+        </mat-form-field>
+          <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid" class="btnLogin">Belépés</button>
+      </form>
+          <div class="btns" fxLayout="row" fxLayoutAlign="space-between center">
+            <button  mat-button color="primary" mat-dialog-close mat-dialog-close="true">Bejelentkezve maradok</button>
+            <button mat-flat-button color="primary" mat-dialog-close mat-dialog-close="false">Mégsem</button>
+          </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+        
+        
+        <!-- <button mat-button mat-dialog-close mat-dialog-close="false">Kilép</button> -->
+
+
+
+
+
+
+<!-- <div class="login-wrapper container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+      <mat-card class="loginForm">
+        <mat-card-title>Belépés az adminfelületre</mat-card-title>	
+        <mat-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="example-form">
+           <mat-form-field class="full-width">
+            <input type="email" matInput placeholder="Email cím" formControlName="email">
+              <mat-hint>Kérem, adja meg az email címét!</mat-hint>
+              <mat-error>Érvénytelen email cím.</mat-error>
+          </mat-form-field>
+                
+            <mat-form-field class="full-width">
+                <input
+                type="password"
+                matInput
+                placeholder="Jelszó"
+                formControlName="password">
+              <mat-hint>Kérem, adja meg a jelszavát!</mat-hint>
+              <mat-error>Hiányzó jelszó!</mat-error>
+            </mat-form-field>
+            </form>
+            <mat-card-actions>
+                <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Belépés</button>
+              </mat-card-actions>
+              <mat-card-actions>
+                <a routerLink="/signup" color="primary">Még nincs fiókja? Itt regisztrálhat.</a>
+              </mat-card-actions>
+          </mat-card-content>
+      </mat-card>
+  </div> -->

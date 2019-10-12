@@ -1,0 +1,31 @@
+<ng-container *ngFor="let puppet of puppets" (ngSubmit)="onSubmit(table.value)">
+    <div class="card">
+        <div class="card-body">
+            <div id="table" class="table-editable">
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th class="text-center">Termék neve</th>
+                        <th class="text-center">Termék típusa</th>
+                        <th class="text-center">Termék ára</th>
+                        <th class="text-center">Szerkeszt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td class="pt-3-half"><img src={{puppet.payload.doc.data().imageUrl}} width="80 px" alt=""></td>
+                        <td class="pt-3-half">{{puppet.payload.doc.data().name}}</td>
+                        <td class="pt-3-half">{{puppet.payload.doc.data().type}}</td>
+                        <td class="pt-3-half">{{puppet.payload.doc.data().price}} HUF</td>
+                        <td class="pt-3-half">
+                            <span class="table-remove"><button type="submit"
+                            class="btn btn-primary btn-sm my-0" routerLink="/edit/{{ puppet.payload.doc.id }}">Szerkeszt</button></span>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>

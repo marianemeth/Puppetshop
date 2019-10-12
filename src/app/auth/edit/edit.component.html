@@ -1,0 +1,44 @@
+<div class="container edit-page">
+    <h2 class="text-center">Termékadatlap</h2>
+    <h4 class="text-center">A termék minden tulajdonsága módosítható</h4>
+    <div class="row">
+        <div class="col edit-form">
+            <form *ngIf="exampleForm" class=""  [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)">
+                <div class="form-group">
+                    <mat-form-field class="input-style">
+                        <input matInput placeholder="Termék neve" class="form-control" formControlName="name">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.name">
+                        <mat-error *ngIf="exampleForm.get('name').hasError(validation.type) && (exampleForm.get('name').dirty || exampleForm.get('name').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="input-style">
+                        <input matInput placeholder="Termék típusa" class="form-control" formControlName="type">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.type">
+                        <mat-error *ngIf="exampleForm.get('type').hasError(validation.type) && (exampleForm.get('type').dirty || exampleForm.get('type').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="input-style">
+                        <input matInput placeholder="Termék ára" class="form-control" formControlName="price">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.price">
+                        <mat-error *ngIf="exampleForm.get('price').hasError(validation.type) && (exampleForm.get('price').dirty || exampleForm.get('price').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="input-style">
+                        <input matInput placeholder="Termékfotó" class="form-control" formControlName="imageUrl">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.imageUrl">
+                        <mat-error *ngIf="exampleForm.get('imageUrl').hasError(validation.type) && (exampleForm.get('imageUrl').dirty || exampleForm.get('imageUrl').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                </div>
+                <button type="submit" class="btn btn-success mr-1">Módosít</button>
+                <button type="button" class="btn btn-danger ml-1" (click)="delete()">Töröl</button>
+            </form>
+        </div>
+    </div>
+</div> 

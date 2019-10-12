@@ -1,0 +1,21 @@
+<div class="container fooldal">
+	<div class="row">
+		<ng-container *ngFor="let puppet of puppets">
+			<div class="col-sm-6 col-md-4 d-flex justify-content-center">
+				<div class="card" style="width: 20rem;">
+					<div class="img">
+						<img [src]="puppet.payload.doc.data().imageUrl" class="card-img-top">
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Játék neve: {{puppet.payload.doc.data().name}}</h5>
+						<p class="card-text">Játék típusa: {{puppet.payload.doc.data().type}}</p>
+						<p class="card-text">{{puppet.payload.doc.data().price}} HUF</p>
+					</div>
+					<div class="card-footer">
+						<button	class="btn btn-primary btn-block">Kosárba</button>
+					</div>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+</div>

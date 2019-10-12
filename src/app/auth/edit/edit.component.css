@@ -1,0 +1,12 @@
+.edit-page {
+    width: 100%;
+    padding: 20px 60px; 
+}
+
+.input-style {
+    width: 100%;
+}
+  
+.mat-error {
+    font-size: 12px;
+}

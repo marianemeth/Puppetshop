@@ -1,0 +1,24 @@
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.navbar-custom {
+    background-color:#3f51b5;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-custom .nav-item .active {
+    color: #ffffff;
+}
+
+  
+  

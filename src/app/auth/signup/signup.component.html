@@ -1,0 +1,38 @@
+<div class="signup-wrapper container" fxLayout="column" fxLayoutAlign="center center">
+        <mat-card class="signup-form">
+            <mat-card-title class="title full-width">
+                    <span>A regisztrációhoz kérem, adja meg az adatait!</span>
+            </mat-card-title>
+        <mat-card-content fxLayout="column">
+            <form fxLayout="column" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <mat-form-field class="full-width">
+                    <input type="email"
+                    matInput
+                    placeholder="Email cím" 
+                    ngModel 
+                    name="email"
+                    email
+                    required
+                    #emailInput="ngModel">
+                    <mat-error *ngIf="emailInput.hasError('required')">A mező kitöltése kötelező!</mat-error>
+                    <mat-error *ngIf="!emailInput.hasError('required')">Érvénytelen email cím.</mat-error>
+                </mat-form-field>
+                <mat-form-field hintLabel="A jelszó minimum 6 karakter hosszúságú." class="full-width">
+                    <input type="password" 
+                    matInput 
+                    placeholder="Jelszó" 
+                    ngModel 
+                    name="password"
+                    minlength="6"
+                    required
+                    #pwInput="ngModel">
+                    <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
+                    <mat-error>A jelszó minimum 6 karakter hosszúságú.</mat-error>
+                </mat-form-field>
+                <mat-checkbox class="signupCheckBox" ngModel name="agree" required color="primary">Elfogadom az Általános Felhasználási Feltételeket.</mat-checkbox>
+                <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Mentés</button>
+                <button mat-button mat-dialog-close color="primary">Mégsem</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+<!-- </div> -->
