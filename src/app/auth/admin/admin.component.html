@@ -7,14 +7,10 @@
                 <div class="form-group">
                     <label for="name">Termék neve</label>
                     <input type="text" id="name" class="form-control" [(ngModel)]="puppet.name" name="name" required>
-                    <!-- <div class="alert alert-danger" *ngIf="name.touched && name.invalid">A terméknév megadása kötelező
-                    </div> -->
                 </div>
                 <div class="form-group">
                     <label for="type">Termék típusa</label>
                     <input type="text" id="type" class="form-control" [(ngModel)]="puppet.type" name="type" required>
-                    <!-- <div class="alert alert-danger" *ngIf="type.touched && type.invalid">A terméktípus megadása kötelező
-                    </div> -->
                 </div>
                 <div class="form-group">
                     <label for="price">Termék ára</label>
@@ -24,32 +20,14 @@
                         </div>
                         <input type="number" id="price" class="form-control" aria-label="Amount" [(ngModel)]="puppet.price" name="price" required [min]="1">
                     </div>
-                    <!-- <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
-                        <div *ngIf="price.errors.required">Adja meg a termék árát!</div>
-                        <div *ngIf="price.errors.min">Az ár minimum 1 HUF></div>
-                    </div> -->
                 </div>
                 <div class="form-group">
                     <label for="imageUrl">Termékfotó (Url-cím)</label>
                     <input type="text" id="imageUrl" class="form-control" [(ngModel)]="puppet.imageUrl" name="price" required>
-                    <!-- <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
-                        <div *ngIf="imageUrl.errors.required">Url megadása kötelező!</div>
-                        <div *ngIf="imageUrl.errors.url">Kérem, adjon meg érvényes Url-címet!</div>
-                    </div> -->
                 </div>
                 <button type="submit" (click)="onSubmit()" class="btn btn-success">Hozzáad</button>
             </form>
         </div>
-        <!-- <div class="col-md-4">
-            <div class="card mb-2" style="width: 25rem;">
-                <img [src]="imageUrl.value" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Játék neve: {{name.value}}</h5>
-                    <p class="card-text">Játék típusa: {{type.value}}</p>
-                    <p class="card-text">{{price.value}} HUF</p>
-                </div>
-            </div>
-        </div> -->
     </div>
 </div>
     

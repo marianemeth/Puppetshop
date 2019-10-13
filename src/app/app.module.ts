@@ -7,10 +7,9 @@ import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { AngularMaterialModule } from './angular-material.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -54,7 +53,6 @@ import { EditResolver } from './auth/edit/edit.resolver';
     ReactiveFormsModule,
     MaterialModule,
     MatButtonModule,MatInputModule,
-    MatSliderModule,
     MatDialogModule,
     FlexLayoutModule,
     NgbModule,
